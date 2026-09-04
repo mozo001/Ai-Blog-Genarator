@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Register</title>
+</head>
+<body>
+    <nav class="bg-blue-600 p-4 text-white flex justify-between">
+        <div>
+            <h1 class="text-3xl font-bold">Ai Blog Generator</h1>
+
+        </div>
+        <div>
+            <a href="#" class="text-white hover:underline">Login</a>
+            <a href="#" class="text-white hover:underline">Register</a>
+
+        </div>
+
+        
+    </nav>
+    <div class="flex flex-col items-center justify-center h-screen bg-gray-100">
+        <div class="big-white p-8 shadow-md rounded-lg max-w-md w-full">
+
+            <from class="flex flex-col space-y-4" action="/login" method="POST">
+                <h2 class="text-2xl font-bold mb-4">Register</h2>
+                <input type="text" name="username" placeholder="Username" class="p-2 border border-gray-300 rounded">
+                <input type="email" name="email" placeholder="Email" class="p-2 border border-gray-300 rounded">
+                <input type="password" name="password" placeholder="Password" class="p-2 border border-gray-300 rounded">
+                <input type="password" name="confirm_password" placeholder="Confirm Password" class="p-2 border border-gray-300 rounded">
+                <button type="submit" class="bg-blue-600 text-white p-2 rounded hover:bg-blue-700">Register</button>
+           
+
+        </div>
+    </div>
+    
+</body>
+</html>

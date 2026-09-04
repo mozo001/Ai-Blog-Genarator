@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+     <style>
+         @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to { 
+                transform: rotate(360deg);
+            }
+        }
+         
+        
+         @-webkit-keyframes rotate {
+            from {
+                -webkit-transform: rotate(0deg);
+            }
+            to { 
+                -webkit-transform: rotate(360deg);
+            }
+        }
+        
+        .load {
+            width: 100px;
+            height: 100px;
+            margin: 110px auto 0;
+            border:solid 10px #8822aa;
+            border-radius: 50%;
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+             -webkit-transition: all 0.5s ease-in;
+            -webkit-animation-name:             rotate; 
+            -webkit-animation-duration:         1.0s; 
+            -webkit-animation-iteration-count:  infinite;
+            -webkit-animation-timing-function: linear;
+                
+                 transition: all 0.5s ease-in;
+            animation-name:             rotate; 
+            animation-duration:         1.0s; 
+            animation-iteration-count:  infinite;
+            animation-timing-function: linear; 
+        }
+     </style>
+    <title>Home page</title>
+</head>
+<body class="flex flex-col bg-gray-100 min-h-screen front-sans antialiased">
+    <nav class="bg-blue-600 p-4 text-white flex justify-between">
+        <div>
+            <h1 class="text-3xl font-bold">Ai Blog Generator</h1>
+
+        </div>
+        <div>
+            <a href="#" class="text-white hover:underline">Logout</a>
+        </div>
+
+        
+    </nav>
+
+    <br>
+    <br>
+
+    <div class="flex-grow container mx-auto mt-10 px-4 sm:px-0">
+
+            <div class="max-w-3xl mx-auto big-white p6 rounded-lg shadow-md transition-transform transform hover:scale-105 flex flex-col items-center justify-center">
+                <div class="text-center">
+                    <h2 class="text-2xl font-semibold mb-4"> Welcome to the Ai Blog Generator</h2>
+                    <p class=" text-gray-700">Generate high-quality blog articles from youtube videos using artificial intelligence. Simply paste the video URL and let our AI do the rest!</p>
+                </div>
+
+                <br>
+            
+                <div>
+                    <h2 class="text-xl md-4 font-semibold">Enter your youtube URL</h2>
+                    <div>
+                        <input type="url" id="youtube-url" placeholder="Enter YouTube URL" class="flex-grow p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 w-full md:w-auto">
+                        <button id="generate-blogbutton" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors mt-2 md:mt-0 md:ml-2">Generate Blog</button>
+                        
+                    </div>
+                    
+                </div>
+                <div style="display: none;" id="loading" class="load">
+
+                </div>
+                <section class="mt-10 flex-grow">
+                    <h2 class="text-2xl font-semibold mb-4">Generated Blog Articles</h2>
+                    <div id="blog-articles" class="mt-2 text-gray-700 space-y-4">
+                        <!-- Generated blog articles will be appended here -->
+                    </div>
+                </section>
+
+            </div>
+    </div>
+
+    <footer class="bg-blue-600 p-4 text-white text-center mt-auto">
+        &copy; 2026 Ai Blog Generator. All rights reserved by MUchowdhury.
+    </footer>
+
+    <script>
+
+    </script>
+
+</body>
+</html>
